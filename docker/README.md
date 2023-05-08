@@ -51,3 +51,13 @@ Note: It is recommended to provide a custom `--base-path` to store the chain dat
 # Purge the local dev chain
 ./run.sh node-template purge-chain --dev --base-path=/data -y
 ```
+```sh
+  # Export the local chain spec to json
+./run.sh node-template build-spec --disable-default-bootnode --chain local > customSpec.json
+```
+```sh
+./run.sh node-template build-spec --chain=customSpec.json --raw --disable-default-bootnode > customSpecRaw.json
+```
+
+
+
